@@ -71,6 +71,8 @@ def apply_filters(frame, min_hsv_const, max_hsv_const, kernel=5):
     return cv.bitwise_and(frame, frame, mask=hsv_mask)
 
 
+
+
 def detect_contours(frame):
     # edge_frame = cv.Canny(frame, threshold, threshold * 3)
     _, edge_frame = cv.threshold(frame, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
